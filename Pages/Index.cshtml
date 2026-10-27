@@ -1,0 +1,174 @@
+﻿@page
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Why Stillwater Should Have a Target</title>
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true">
+</head>
+<body>
+    <header>
+        <div class="container navigation">
+            <a class="site-title" href="#">Target in Stillwater</a>
+            <nav aria-label="Main navigation">
+                <a href="#data">Market Data</a>
+                <a href="#comparison">Comparison</a>
+                <a href="#sources">Sources</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="hero">
+            <div>
+                <span class="label">STILLWATER, OKLAHOMA</span>
+                <h1>Why Stillwater should have a Target.</h1>
+                <p>Stillwater has a major university, roughly 50,000 residents, and shoppers coming in from surrounding communities. Those factors make it worth considering for a Target store.</p>
+                <a class="button" href="#data">Explore the data</a>
+            </div>
+            <aside class="overview">
+                <h2>The basic argument</h2>
+                <ul>
+                    <li>A local customer base throughout the year</li>
+                    <li>Student demand for apartment and dorm essentials</li>
+                    <li>An existing role as a regional shopping destination</li>
+                    <li>A similar college town already has a Target</li>
+                </ul>
+                <p class="note">This is a student research project, not an announcement from Target.</p>
+            </aside>
+        </section>
+
+        <section id="data">
+            <h2>Stillwater by the numbers</h2>
+            <p class="intro">These figures describe different parts of the market. They overlap and should not be added together.</p>
+
+            <div class="stats">
+                <article class="card">
+                    <strong>50,046</strong>
+                    <h3>City residents</h3>
+                    <p>Stillwater population estimate, July 2025. [1]</p>
+                </article>
+                <article class="card">
+                    <strong>83,889</strong>
+                    <h3>County residents</h3>
+                    <p>Payne County population, including Stillwater, July 2025. [2]</p>
+                </article>
+                <article class="card">
+                    <strong>27,655</strong>
+                    <h3>OSU enrollment</h3>
+                    <p>Preliminary first-day enrollment for OSU–Stillwater, fall 2025. [3]</p>
+                </article>
+            </div>
+        </section>
+
+        <section class="columns">
+            <div>
+                <h2>People already come here to shop.</h2>
+                <p>OSU Extension reported a retail pull factor of <b>1.76</b> for Stillwater in its 2024 analysis. This income-adjusted measure indicates that the city attracts retail spending from outside its resident population. [4]</p>
+                <p>That supports looking beyond city limits when evaluating demand. Nearby communities such as Perkins, Cushing, and Perry could be included in a study of driving distances and shopping habits.</p>
+                <p class="note">Payne County is useful regional context, but its entire population is not automatically a store’s customer base.</p>
+            </div>
+
+            <div class="card chart">
+                <h3>Retail pull factor</h3>
+                <p>A value above 1 indicates a city attracts outside retail spending.</p>
+                <div class="chart-label"><span>Population-based benchmark</span><b>1.00</b></div>
+                <div class="track"><div class="bar benchmark"></div></div>
+                <div class="chart-label"><span>Stillwater</span><b>1.76</b></div>
+                <div class="track"><div class="bar stillwater"></div></div>
+                <p class="note">Scale: 0–2. Source: OSU Extension, 2024 analysis. This does not predict Target sales.</p>
+            </div>
+        </section>
+
+        <section class="student-section">
+            <h2>What about the students?</h2>
+            <p>It would be easy to add OSU’s enrollment to Stillwater’s population and call that the market size, but that would double-count people. Census rules generally count students where they live while attending college. [8]</p>
+            <p>The better argument is that students have specific shopping needs: bedding, storage, kitchen supplies, personal care, and groceries. A feasibility study should examine those needs and how demand changes during school breaks.</p>
+        </section>
+
+        <section id="comparison">
+            <h2>How does Stillwater compare?</h2>
+            <p class="intro">Manhattan, Kansas is another college town with a similar city population and an existing Target store.</p>
+            <table>
+                <caption>July 2025 city population estimates. [1, 5]</caption>
+                <thead>
+                    <tr>
+                        <th scope="col">City</th>
+                        <th scope="col">Population</th>
+                        <th scope="col">University</th>
+                        <th scope="col">Target</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">Stillwater, OK</th>
+                        <td>50,046</td>
+                        <td>Oklahoma State</td>
+                        <td>Proposed here</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Manhattan, KS</th>
+                        <td>54,673</td>
+                        <td>Kansas State</td>
+                        <td>Existing store [6]</td>
+                    </tr>
+                </tbody>
+            </table>
+            <p class="note">This comparison shows that a similarly sized college town can have a Target. It does not prove that competition, income, or store profitability would be the same.</p>
+        </section>
+
+        <section>
+            <h2>What could regular shopping trips add up to?</h2>
+            <p class="intro">The examples below assume 10,000 shopping trips per week. They show how basket size affects annual spending.</p>
+            <div class="stats">
+                <article class="card">
+                    <h3>$10 per trip</h3>
+                    <strong>$5.2M</strong>
+                    <p>Annual spending</p>
+                </article>
+                <article class="card">
+                    <h3>$20 per trip</h3>
+                    <strong>$10.4M</strong>
+                    <p>Annual spending</p>
+                </article>
+                <article class="card">
+                    <h3>$30 per trip</h3>
+                    <strong>$15.6M</strong>
+                    <p>Annual spending</p>
+                </article>
+            </div>
+            <p class="note">Calculation: 10,000 trips × average basket × 52 weeks. These are hypothetical examples, not revenue forecasts. They do not account for costs or spending shifted from existing stores.</p>
+        </section>
+
+        <section class="next-steps">
+            <h2>Is there enough evidence to take a closer look?</h2>
+            <p>Stillwater’s retail activity and university population support further research. The next step would be collecting information about shopping habits, competition, and possible locations.</p>
+            <p>Target also operates different store formats, including smaller stores and college-campus locations, so the study could consider more than one store size. [7]</p>
+            <a class="button" href="https://www.change.org/p/establish-a-target-store-in-stillwater-oklahoma">View the community petition</a>
+        </section>
+
+        <section id="sources">
+            <h2>Sources and notes</h2>
+            <ol class="sources">
+                <li><a href="https://www.census.gov/quickfacts/stillwatercityoklahoma">U.S. Census Bureau — Stillwater</a></li>
+                <li><a href="https://www.census.gov/quickfacts/paynecountyoklahoma">U.S. Census Bureau — Payne County</a></li>
+                <li><a href="https://news.okstate.edu/articles/communications/2025/osu_system_breaks_all_time_enrollment_record_for_higher_education_in_oklahoma">Oklahoma State University — Fall 2025 enrollment</a></li>
+                <li><a href="https://extension.okstate.edu/fact-sheets/pull-factors-a-measure-of-retail-sales-success-estimates-for-77-oklahoma-cities">OSU Extension — Retail pull factors, 2024 edition</a></li>
+                <li><a href="https://www.census.gov/quickfacts/manhattancitykansas">U.S. Census Bureau — Manhattan, Kansas</a></li>
+                <li><a href="https://www.target.com/store-locator/find-stores/66502">Target — Manhattan store listing</a></li>
+                <li><a href="https://corporate.target.com/about/locations/inside-our-stores">Target — Store formats</a></li>
+                <li><a href="https://www.census.gov/content/dam/Census/programs-surveys/decennial/2020-census/2020-Census-Residence-Criteria.pdf">U.S. Census Bureau — Student residence rules</a></li>
+            </ol>
+            <p class="note">No verified population requirement or rejection by Target is claimed. The petition is independently operated and does not guarantee a store.</p>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">Student research project · Not affiliated with Target or Oklahoma State University</div>
+    </footer>
+</body>
+</html>
