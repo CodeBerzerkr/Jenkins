@@ -43,8 +43,22 @@ pipeline {
                             $az = Join-Path $env:ProgramFiles 'Microsoft SDKs/Azure/CLI2/wbin/az.cmd'
                             $credential = Get-Content -LiteralPath $env:AZURE_CREDENTIALS_FILE -Raw | ConvertFrom-Json
 
-                            Compress-Archive -Path 'bin/publish/*' -DestinationPath 'bin/target.zip' -Force
-
+Add-Type -AssemblyName System.IO.Compression.FileSystem
+$publishPath = (Resolve-Path 'bin/publish').Path
+$zipPath = Join-Path $pwd.Path 'bin/target.zip'
+if (Test-Path -LiteralPath $zipPath) {
+    Remove-Item -LiteralPath $zipPath
+}
+$zip = [IO.Compression.ZipFile]::Open($zipPath, 'Create')
+try {
+    Get-ChildItem -LiteralPath $publishPath -Recurse -File -Force | ForEach-Object {
+        $entry = $_.FullName.Substring($publishPath.Length + 1).Replace([char]92, [char]47)
+        [IO.Compression.ZipFileExtensions]::CreateEntryFromFile($zip, $_.FullName, $entry) | Out-Null
+    }
+}
+finally {
+    $zip.Dispose()
+}
                             try {
                                 & $az login --service-principal --username $credential.appId "--password=$($credential.password)" --tenant $credential.tenant --output none
                                 if ($LASTEXITCODE -ne 0) {
