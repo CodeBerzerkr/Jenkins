@@ -2,11 +2,23 @@ pipeline {
     agent any
 
     stages {
-        stage('Check connection') {
+        stage('Restore') {
             steps {
-                echo "Building branch: ${env.BRANCH_NAME}"
+                bat 'dotnet restore Target.csproj'
+            }
+        }
+
+        stage('Build') {
+            steps {
+                bat 'dotnet build Target.csproj -c Release --no-restore'
+            }
+        }
+
+        stage('Publish') {
+            steps {
+                bat 'dotnet publish Target.csproj -c Release --no-build -o bin/publish'
+                archiveArtifacts artifacts: 'bin/publish/**'
             }
         }
     }
 }
-
