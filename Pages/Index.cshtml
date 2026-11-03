@@ -12,12 +12,131 @@
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true">
 </head>
 <body>
-    <main>
-        <h1>Stillwater needs a Target.</h1>
-        <p>More options. Less driving.</p>
-        <a href="https://www.change.org/p/establish-a-target-store-in-stillwater-oklahoma">
-            Sign the Petition
+    <header class="container">
+        <a class="brand" href="#" aria-label="Target in Stillwater home">
+            <svg class="logo" viewBox="0 0 100 100" aria-hidden="true">
+                <circle cx="50" cy="50" r="48" fill="#cc0000" />
+                <circle cx="50" cy="50" r="32" fill="white" />
+                <circle cx="50" cy="50" r="16" fill="#cc0000" />
+            </svg>
+            <span>Target in Stillwater</span>
         </a>
+        <a class="research-link" href="#research">Market Research &darr;</a>
+    </header>
+
+    <main class="container">
+        <section class="hero">
+            <span class="label">STILLWATER, OKLAHOMA</span>
+            <h1>Big college town.<br>One thing missing.</h1>
+            <p>
+                From dorm essentials to everyday groceries, a Target would
+                give Stillwater students and residents more options close to home.
+            </p>
+
+            <!-- Change this button text for the pipeline demo. -->
+            <a class="button"
+               href="https://www.change.org/p/establish-a-target-store-in-stillwater-oklahoma">
+                Bring Target to Stillwater
+            </a>
+        </section>
+
+        <section id="research">
+            <span class="label">THE LOCAL MARKET</span>
+            <h2>Why Stillwater?</h2>
+
+            <div class="stats">
+                <article class="card">
+                    <strong>50,046</strong>
+                    <h3>City residents</h3>
+                    <p>A local customer base beyond the university.</p>
+                    <small>July 2025 population estimate. [1]</small>
+                </article>
+
+                <article class="card">
+                    <strong>27,655</strong>
+                    <h3>OSU students</h3>
+                    <p>Shopping needs for dorms, apartments, and everyday life.</p>
+                    <small>Preliminary fall 2025 Stillwater enrollment. [2]</small>
+                </article>
+
+                <article class="card">
+                    <strong>1.76</strong>
+                    <h3>Retail pull factor</h3>
+                    <p>A value above 1 indicates outside retail spending.</p>
+                    <small>OSU Extension, 2024 analysis. [3]</small>
+                </article>
+            </div>
+
+            <p class="note">
+                Students overlap with the city population;
+                these figures should not be added together.
+            </p>
+        </section>
+
+        <section class="comparison">
+            <div>
+                <span class="label">A COLLEGE-TOWN COMPARISON</span>
+                <h2>Manhattan has one.<br>Could Stillwater?</h2>
+                <p>
+                    Manhattan, Kansas has a similar population, Kansas State
+                    University, and an existing Target store. [4, 5]
+                </p>
+            </div>
+
+            <div class="towns">
+                <div>
+                    <h3>Stillwater, OK</h3>
+                    <strong>50,046</strong>
+                    <span>Oklahoma State University</span>
+                    <span class="status">Target proposed here</span>
+                </div>
+                <div>
+                    <h3>Manhattan, KS</h3>
+                    <strong>54,673</strong>
+                    <span>Kansas State University</span>
+                    <span class="status">Existing Target</span>
+                </div>
+            </div>
+        </section>
+
+        <p class="note">
+            These indicators support further research.
+            Competition, shopping habits, and costs would still need evaluation.
+        </p>
+
+        <details class="sources">
+            <summary>Sources and research notes</summary>
+            <ol>
+                <li>
+                    <a href="https://www.census.gov/quickfacts/stillwatercityoklahoma">
+                        Census Bureau — Stillwater population
+                    </a>
+                </li>
+                <li>
+                    <a href="https://news.okstate.edu/articles/communications/2025/osu_system_breaks_all_time_enrollment_record_for_higher_education_in_oklahoma">
+                        OSU — Fall 2025 enrollment
+                    </a>
+                </li>
+                <li>
+                    <a href="https://extension.okstate.edu/fact-sheets/pull-factors-a-measure-of-retail-sales-success-estimates-for-77-oklahoma-cities">
+                        OSU Extension — Retail pull factors
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.census.gov/quickfacts/manhattancitykansas">
+                        Census Bureau — Manhattan population
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.target.com/store-locator/find-stores/66502">
+                        Target — Manhattan store listing
+                    </a>
+                </li>
+            </ol>
+          
+        </details>
     </main>
+
+
 </body>
 </html>
